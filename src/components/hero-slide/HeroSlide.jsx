@@ -11,6 +11,7 @@ import apiConfig from "../../api/apiConfig";
 
 import "./hero-slide.scss";
 import { useHistory } from "react-router";
+import { Box } from "@mui/material";
 
 const HeroSlide = () => {
   SwiperCore.use([Autoplay]);
@@ -34,13 +35,13 @@ const HeroSlide = () => {
   }, []);
 
   return (
-    <div className="hero-slide">
+    <Box sx={{mb:"30px"}}>
       <Swiper
         modules={[Autoplay]}
         grabCursor={true}
         spaceBetween={0}
         slidesPerView={1}
-        // autoplay={{delay: 3000}}
+        autoplay={{delay: 3000}}
       >
         {movieItems.map((item, i) => (
           <SwiperSlide key={i}>
@@ -56,7 +57,7 @@ const HeroSlide = () => {
       {movieItems.map((item, i) => (
         <TrailerModal key={i} item={item} />
       ))}
-    </div>
+    </Box>
   );
 };
 

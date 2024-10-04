@@ -5,6 +5,7 @@ import { Link, useLocation } from "react-router-dom";
 import "./header.scss";
 
 import logo from "../../assets/Logo_White.png";
+import { AppBar, Box } from "@mui/material";
 
 const headerNav = [
   {
@@ -45,11 +46,18 @@ const Header = () => {
   }, []);
 
   return (
-    <div ref={headerRef} className="header">
-      <div className="header__wrap container">
+    <AppBar
+      ref={headerRef}
+      position="fixed"
+      className="header"
+      // sx={{ justifyContent: "space-between", display: "inline-flex" }}
+    >
+      <Box className="header__wrap container">
+        {/* <div  className="header"> */}
+        {/* <div className="header__wrap container"> */}
         <div>
           <Link to="/">
-            <img src={logo} alt="Logo"  width={100}/>
+            <img src={logo} alt="Logo" width={100} />
           </Link>
         </div>
         <ul className="header__nav">
@@ -59,8 +67,11 @@ const Header = () => {
             </li>
           ))}
         </ul>
-      </div>
-    </div>
+      </Box>
+
+      {/* </div> */}
+      {/* </div> */}
+    </AppBar>
   );
 };
 

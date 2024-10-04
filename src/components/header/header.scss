@@ -18,13 +18,13 @@
 }
 
 .header {
-    height: $header-height;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 99;
-    transition: height 0.3s ease, background-color 0.3s ease;
+    // height: $header-height;
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    // width: 100%;
+    // z-index: 99;
+    // transition: height 0.3s ease, background-color 0.3s ease;
 
     &.shrink {
         height: $header-shrink-height;
